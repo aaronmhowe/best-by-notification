@@ -101,3 +101,30 @@ def logout():
 @login_required
 def protected_route():
   return jsonify({'message': 'This is a protected route accessible only to authenticated users.'})
+
+def generate_code():
+  """
+  Generates a code for password reset when the user forgets their password.
+  """
+  pass
+
+@users_bp.route('/reset_request', methods=['POST'])
+def forgot_password_reset():
+  """
+  Sends a request for password reset to the server upon user invokation of a forgotten password.
+  """
+  pass
+
+@users_bp.route('validate_code', methods=['POST'])
+def validate_code():
+  """
+  Validates code input from the user for password reset.
+  """
+  pass
+
+@users_bp.route('/password_reset', methods=['POST'])
+def password_reset():
+  """
+  Resets a user's password upon provided input.
+  """
+  pass
